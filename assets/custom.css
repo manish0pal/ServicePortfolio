@@ -1,0 +1,69 @@
+body {	 
+	 color: #fff;
+     width: 100vw;
+     height: 100vh;
+	 background-image:   radial-gradient(ellipse at bottom left, rgba(0,163,203,1) 40%, rgba(0,163,203,0) 40%),
+     radial-gradient(ellipse at top right, rgba(0,163,203,1) 30%, rgba(0,163,203,0) 30%),
+     linear-gradient(to right, rgba(98,87,147,1) 0%, rgba(98,87,147,1) 33%, rgba(213,93,100,1) 33%, rgba(213,93,100,1) 66%, rgba(228,145,41,1) 66%);
+ 
+     
+     
+     /* Center and scale the image nicely */
+     background-size: 50% 100%;
+   /*  background: #5C258D;  
+     background: -webkit-linear-gradient(to right, #4389A2, #5C258D); 
+     background: linear-gradient(to right, #4389A2, #5C258D); 
+     */
+}
+
+body .card{
+    background: rgba(0, 0, 0, 0);
+    box-shadow:none;
+}
+ body .glass {
+	 border-radius: 1em;
+	 border: 1px solid rgba(255, 255, 255, 0.5);
+	 text-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+	 background: rgba(255, 255, 255, 0.2);
+	 backdrop-filter: blur(20px);
+	 transform: perspective(500px);
+	 transform-style: preserve-3d;
+}
+.holder {
+    position: relative;
+}
+.holder:before, .holder:after {
+    animation: orbit 5s linear infinite;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 100px;
+}
+.holder:before {
+    background: #ffe897;
+    background: -moz-radial-gradient(top right, #ffe897, #f98a05);
+    background: radial-gradient(to bottom left, #ffe897, #f98a05);
+    background: -webkit-radial-gradient(top right, #ffe897, #f98a05);
+}
+.holder:after {
+    animation-delay: -2.5s;
+    background: #e0e793;
+    background: -moz-radial-gradient(bottom right, #e0e793, #6dd0f1);
+    background: radial-gradient(to top left, #e0e793, #6dd0f1);
+    background: -webkit-radial-gradient(bottom right, #e0e793, #6dd0f1);
+    top: 0;
+    right: 0;
+
+}
+@keyframes orbit {
+    from {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+   }
+    to {
+        transform: rotate(360deg) translateX(100px) rotate(-360deg);
+   }
+}
+ 
+ 
